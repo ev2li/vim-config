@@ -40,7 +40,6 @@ Plugin 'mhinz/vim-startify'
 Plugin 'junegunn/fzf', { 'do': {-> fzf#install()} }
 Plugin 'junegunn/fzf.vim'
 Plugin 'ggandor/leap.nvim'
-Plugin 'kdheepak/lazygit.nvim'
 "你的所有插件需要在下面这行之前
 call vundle#end()
 
