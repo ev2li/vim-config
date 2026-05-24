@@ -54,11 +54,6 @@ nmap <leader>bd :bunload<CR>
 
 nnoremap <silent> <Leader>g :MagitOnly<CR>
 
-" leaderF快捷键
-noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
-noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
-noremap <leader>fyyl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
-
 "窗口操作
 nnoremap <Leader><TAB> <C-O><CR>
 nnoremap <leader>ws :<C-u>sp<CR>
@@ -104,4 +99,4 @@ let g:Lf_CommandMap = {
 nnoremap <silent> <leader>ff :Leaderf file<CR> 
 nnoremap <silent> <leader>fb :Leaderf buffer<CR>
 nnoremap <silent> <leader>fm :Leaderf mru<CR>
-noremap <leader>fl :Leaderf line<CR>
+noremap <silent> <leader>fl :Leaderf line<CR>

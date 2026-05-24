@@ -6,7 +6,6 @@ if has('termguicolors')
 endif
 " 显示相对行号
 set relativenumber
-
 " 同时显示当前行绝对号 + 其他行相对号（最实用）
 set number relativenumber
 " 设置tab和空格样式
@@ -17,13 +16,8 @@ highlight LeaderTab guifg=#666666
 " " 匹配行首tab
 match LeaderTab /^\t/
 
-"set nu "显示行号
-
 " 不要使用vi的键盘模式，而是vim自己的
 set nocompatible
-
-" history文件中需要记录的行数
-set history=100
 
 " 在处理未保存或只读文件的时候，弹出确认
 set confirm
@@ -53,13 +47,6 @@ syntax on
 :highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
 :match OverLength '1v.*'
 
-" 状态行颜色
-highlight StatusLine guifg=SlateBlue guibg=Yellow
-highlight StatusLineNC guifg=Gray guibg=White
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 文件设置
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 不要备份文件（根据自己需要取舍）
 set nobackup
 
@@ -110,12 +97,11 @@ set t_Co=256
 " 配色方案
 "set background=dark
 "colorscheme solarized
-"colorscheme molokai
-colorscheme inkpot
-" colorscheme space_vim_theme 
-"colorscheme dark_plus
+" colorscheme molokai
+" colorscheme inkpot
+colorscheme dark_plus
 "高亮当前行
-" set cursorline
+set cursorline
 " hi CursorLine   cterm=NONE ctermbg=black ctermfg=red guibg=NONE guifg=NONE
 
 " 以下内容来自韦大的配置
@@ -156,25 +142,11 @@ command! -bang -nargs=* Rg
   \   'rg --hidden --no-heading --color=never ' . <q-args>,
   \   1, fzf#vim#with_preview({'down':'40%'}), <bang>0)
 
-" ========== 修复：AutoPairs + UltiSnips + Coc 回车冲突 ==========
-let g:UltiSnipsNoMap = 1
-let g:UltiSnipsExpandTrigger = "<C-l>"
-let g:UltiSnipsJumpForwardTrigger = "<C-l>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
-
-" 2. 关闭 UltiSnips 对回车的绑定
-let g:UltiSnipsNoMap = 1
-
-" 3. 关闭 auto-pairs 自带回车，避免冲突
-let g:AutoPairsMapCR = 0
-
-" 4. 最终正确回车：Coc补全优先，否则正常换行+括号
 inoremap <silent><expr> <CR>
       \ coc#pum#visible() ? coc#pum#confirm()
       \: "\<CR>"
-
 " 用 <Leader>s 代替 S
 let g:magit_stage_file_mapping   = '<Leader>s'
 let g:magit_commit_mapping = '<Leader>cc'
-let g:magit_push_mapping = '<Leader>k'
+let g:magit_push_mapping = '<Leader>p'
 nnoremap <silent> <Leader>p :!git push<<CR>
