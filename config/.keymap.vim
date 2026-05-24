@@ -55,7 +55,7 @@ nmap <leader>flo :FloatermToggle<CR>
 "kill current buffer
 nmap <leader>bd :bunload<CR>
 
-nnoremap <silent> <Leader>ga :Git add %:p<CR>
+nnoremap <silent> <Leader>ga :Git add .<CR>
 nnoremap <silent> <Leader>gd :Gdiffsplit<CR>
 nnoremap <silent> <Leader>gc :Git commit<CR>
 nnoremap <silent> <Leader>gb :Git blame<CR>
