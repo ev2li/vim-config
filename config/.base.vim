@@ -177,3 +177,4 @@ inoremap <silent><expr> <CR>
 let g:magit_stage_file_mapping   = '<Leader>s'
 let g:magit_commit_mapping = '<Leader>cc'
 let g:magit_push_mapping = '<Leader>k'
+nnoremap <silent> <Leader>p :!git push<<CR>
