@@ -1,4 +1,3 @@
-"|~              keymap.
 map qq <Esc>:q!<CR>
 map w <Esc>:w!<CR>
 map wq <Esc>:wq!<CR>
@@ -18,7 +17,7 @@ vmap <leader><leader>j :m'>+<cr>`<my`>mzgv`yo`z
 vmap <leader><leader>k :m'<-2<cr>`>my`<mzgv`yo`z
 
 "编辑文件
-nmap <Leader>ff <Esc>:e 
+nmap <Leader>fe <Esc>:e 
 
 "执行vim命令
 nmap xx :
@@ -55,13 +54,7 @@ nmap <leader>flo :FloatermToggle<CR>
 "kill current buffer
 nmap <leader>bd :bunload<CR>
 
-nnoremap <silent> <Leader>ga :Git add .<CR>
-nnoremap <silent> <Leader>gd :Gdiffsplit<CR>
-nnoremap <silent> <Leader>gc :Git commit<CR>
-nnoremap <silent> <Leader>gb :Git blame<CR>
-nnoremap <silent> <Leader>gf :Gfetch<CR>
-nnoremap <silent> <Leader>gs :Git<CR>
-nnoremap <silent> <Leader>gp :Gpush<CR>
+nnoremap <silent> <Leader>g :Magit<CR>
 
 " leaderF快捷键
 noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
@@ -100,3 +93,16 @@ inoremap jk <esc>
 nnoremap 9 $
 nnoremap 0 ^
 noremap  <leader>h :History<CR>
+
+
+" 让 LeaderF 里用 j/k 上下选列表
+let g:Lf_CommandMap = {
+\ '<C-K>': ['<Up>'],
+\ '<C-J>': ['<Down>'],
+\ '<Up>': ['<C-K>'],
+\ '<Down>': ['<C-J>']
+\ }
+" 常用映射
+nnoremap <silent> <leader>ff :Leaderf file<CR> 
+nnoremap <silent> <leader>fb :Leaderf buffer<CR>r
+nnoremap <silent> <leader>fm :Leaderf mru<CR>

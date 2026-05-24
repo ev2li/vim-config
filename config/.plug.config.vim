@@ -162,9 +162,10 @@ nmap <silent> gr <Plug>(coc-references)
 " 悬浮提示（看文档）
 nnoremap <silent> K :call CocAction('doHover')<CR>
 
-nmap <leader>s <Plug>(leap-forward)
-nmap <leader>S <Plug>(leap-backward)
-xmap <leader>s <Plug>(leap-forward)
-xmap <leader>S <Plug>(leap-backward)
-omap <leader>s <Plug>(leap-forward)
-omap <leader>S <Plug>(leap-backward)
+" vim-yazi 配置
+let g:yazi_replace_netrw = 1  " 替代 netrw
+let g:yazi_floating_window = 1 " 浮动窗口（Neovim）
+nnoremap <leader>y :Yazi<CR>
+" 强制 Yazi 退出只关闭自身，保留 Vim
+autocmd FileType yazi nnoremap <buffer> q :close<CR>
+autocmd FileType yazi inoremap <buffer> q <ESC>:close<CR>

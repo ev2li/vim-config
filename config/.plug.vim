@@ -19,9 +19,8 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'junegunn/vim-slash'
 " Plugin 'https://github.com/honza/vim-snippets'
 "Plugin 'SirVer/ultisnips'
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 Plugin 'regedarek/ZoomWin'
-" Plugin 'easymotion/vim-easymotion'
 Plugin 'liuchengxu/vim-which-key'
 Plugin 'voldikss/vim-floaterm'
 Plugin 'psliwka/vim-smoothie'
@@ -39,7 +38,9 @@ Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 Plugin 'mhinz/vim-startify'
 Plugin 'junegunn/fzf', { 'do': {-> fzf#install()} }
 Plugin 'junegunn/fzf.vim'
-Plugin 'ggandor/leap.nvim'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'jreybert/vimagit'
+Plugin 'yukimura1227/vim-yazi'
 "你的所有插件需要在下面这行之前
 call vundle#end()
 
