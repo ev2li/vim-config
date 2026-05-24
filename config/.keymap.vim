@@ -99,4 +99,5 @@ let g:Lf_CommandMap = {
 nnoremap <silent> <leader>ff :Leaderf file<CR> 
 nnoremap <silent> <leader>fb :Leaderf buffer<CR>
 nnoremap <silent> <leader>fm :Leaderf mru<CR>
-noremap <silent> <leader>fl :Leaderf line<CR>
+nnoremap <silent> <leader>fl :Leaderf line<CR>
+nnoremap <silent><leader>z :MaximizerToggle<CR>

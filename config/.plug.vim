@@ -41,6 +41,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'jreybert/vimagit'
 Plugin 'yukimura1227/vim-yazi'
+Plugin 'szw/vim-maximizer'
 "你的所有插件需要在下面这行之前
 call vundle#end()
 
