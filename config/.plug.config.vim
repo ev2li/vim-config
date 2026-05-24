@@ -155,3 +155,21 @@ inoremap <silent><expr> <Tab>
 " 状态栏显示状态（可选）
 set statusline+=%{codeium#GetStatusString()}
 
+" 补全菜单样式
+set completeopt=menu,menuone,noselect
+
+" 回车确认选中的补全（最重要）
+inoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+
+" 按 Ctrl+Space 手动触发补全
+inoremap <silent> <C-Space> <C-o>:call coc#refresh()<CR>
+
+" 回车不换行，只确认补全（更像 VSCode）
+inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+
+" 跳转定义
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+" 悬浮提示（看文档）
+nnoremap <silent> K :call CocAction('doHover')<CR>
