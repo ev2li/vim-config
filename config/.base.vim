@@ -20,6 +20,7 @@ match LeaderTab /^\t/
 set nocompatible
 
 " 在处理未保存或只读文件的时候，弹出确认
+
 set confirm
 
 " 与windows共享剪贴板
@@ -149,3 +150,4 @@ inoremap <silent><expr> <CR>
 let g:magit_stage_file_mapping   = '<Leader>s'
 let g:magit_commit_mapping = '<Leader>cc'
 nnoremap <silent> <Leader>p :!git push<CR>
+autocmd FileType magit nmap <localleader>sa :<C-u>%S<CR>
