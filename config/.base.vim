@@ -151,3 +151,6 @@ let g:magit_stage_file_mapping   = '<Leader>s'
 let g:magit_commit_mapping = '<Leader>cc'
 nnoremap <silent> <Leader>p :!git push<CR>
 autocmd FileType magit nmap <localleader>sa :<C-u>%S<CR>
+" 关掉 commit 二次确认，写完 message 用 :w 或 ZZ 直接提交
+let g:magit_commit_no_confirm = 1
+
