@@ -134,3 +134,24 @@ autocmd FileType java,c,cpp set commentstring=//\ %s
 set laststatus=2
 set encoding=utf-8
 let g:airline_powerline_fonts = 1
+
+" 启用
+let g:codeium_enabled = v:true 
+
+" 不要自动映射 Tab（避免和其他补全冲突）
+" let g:codeium_no_map_tab = v:true
+" 1. 禁用 Codeium 自带的快捷键绑定（必须在插件加载之前设置）
+" let g:codeium_disable_bindings = 1
+
+" 2. 手动设置 Tab 键接受补全
+" imap <Tab> <Cmd>call codeium#Accept()<CR>
+
+" 3. （可选）同时设置 Ctrl + ] 作为备用的接受快捷键
+" imap <C-]> <Cmd>call codeium#Accept()<CR>
+" 自定义 Tab 接受
+inoremap <silent><expr> <Tab>
+\ codeium#Accept() ? "\<Tab>" : "\<Tab>"
+
+" 状态栏显示状态（可选）
+set statusline+=%{codeium#GetStatusString()}
+
