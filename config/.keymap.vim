@@ -29,8 +29,6 @@ map <leader>bp :bprevious<cr>
 nmap <leader>ls <Esc>:ls<CR>
 "最大化buffer
 nmap <leader>wo <C-W>o
-"Ycm跳转到声明或定义
-""nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "nnoremap <leader>jo <C-O>
 " 重新加载vimrc文件
 nnoremap <leader>r :source $MYVIMRC<cr>
@@ -50,7 +48,7 @@ nmap <leader>fed :e ~/.vimrc<CR>
 "whichkey
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 "Floaterm
-nmap <leader>flo :FloatermToggle<CR>
+nmap <leader>s :FloatermToggle<CR>
 "kill current buffer
 nmap <leader>bd :bunload<CR>
 
@@ -59,7 +57,7 @@ nnoremap <silent> <Leader>g :MagitOnly<CR>
 " leaderF快捷键
 noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
 noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
-noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+noremap <leader>fyyl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
 
 "窗口操作
 nnoremap <Leader><TAB> <C-O><CR>
@@ -102,7 +100,8 @@ let g:Lf_CommandMap = {
 \ '<Up>': ['<C-K>'],
 \ '<Down>': ['<C-J>']
 \ }
-" 常用映射
+" leaderF快捷键
 nnoremap <silent> <leader>ff :Leaderf file<CR> 
 nnoremap <silent> <leader>fb :Leaderf buffer<CR>
 nnoremap <silent> <leader>fm :Leaderf mru<CR>
+noremap <leader>fl :Leaderf line<CR>
