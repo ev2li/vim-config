@@ -1,4 +1,3 @@
-set fenc=utf-8
 set fencs=utf-8,usc-bom,euc-jp,gb18030,gbk,gb2312,cp936
 set nolist
 if has('termguicolors')
@@ -177,4 +176,4 @@ inoremap <silent><expr> <CR>
 " 用 <Leader>s 代替 S
 let g:magit_stage_file_mapping   = '<Leader>s'
 let g:magit_commit_mapping = '<Leader>cc'
-let g:magit_push_mapping = '<Leader>p'
+let g:magit_push_mapping = 'p'
