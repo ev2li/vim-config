@@ -54,7 +54,7 @@ nmap <leader>flo :FloatermToggle<CR>
 "kill current buffer
 nmap <leader>bd :bunload<CR>
 
-nnoremap <silent> <Leader>g :Magit<CR>
+nnoremap <silent> <Leader>g :MagitOnly<CR>
 
 " leaderF快捷键
 noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
@@ -104,5 +104,5 @@ let g:Lf_CommandMap = {
 \ }
 " 常用映射
 nnoremap <silent> <leader>ff :Leaderf file<CR> 
-nnoremap <silent> <leader>fb :Leaderf buffer<CR>r
+nnoremap <silent> <leader>fb :Leaderf buffer<CR>
 nnoremap <silent> <leader>fm :Leaderf mru<CR>
