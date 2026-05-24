@@ -17,11 +17,11 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'junegunn/vim-slash'
-Plugin 'https://github.com/honza/vim-snippets'
-Plugin 'SirVer/ultisnips'
+" Plugin 'https://github.com/honza/vim-snippets'
+"Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-fugitive'
 Plugin 'regedarek/ZoomWin'
-Plugin 'easymotion/vim-easymotion'
+" Plugin 'easymotion/vim-easymotion'
 Plugin 'liuchengxu/vim-which-key'
 Plugin 'voldikss/vim-floaterm'
 Plugin 'psliwka/vim-smoothie'
@@ -32,10 +32,14 @@ Plugin 'vim-scripts/a.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'tpope/vim-eunuch', {'on': ['Mkdir', 'Rename', 'Unlink', 'Delete', 'Move', 'Chmod', 'Cfind', 'Clocate', 'Lfine', 'Llocate', 'SudoEdit', 'SudoWrite', 'Wall', 'W']}
 " 状态栏（替代 powerline，零报错）
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Exafunction/codeium.vim'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'mhinz/vim-startify'
+Plugin 'junegunn/fzf', { 'do': {-> fzf#install()} }
+Plugin 'junegunn/fzf.vim'
+Plugin 'ggandor/leap.nvim'
 "你的所有插件需要在下面这行之前
 call vundle#end()
 

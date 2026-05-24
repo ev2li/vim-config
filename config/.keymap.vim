@@ -21,7 +21,7 @@ vmap <leader><leader>k :m'<-2<cr>`>my`<mzgv`yo`z
 nmap <Leader>ff <Esc>:e 
 
 "执行vim命令
-map <space><space>x <ESC>:
+nmap xx :
 
 "前后buffer
 map <leader>bn :bnext<cr>
@@ -34,7 +34,7 @@ nmap <leader>wo <C-W>o
 ""nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 "nnoremap <leader>jo <C-O>
 " 重新加载vimrc文件
-nnoremap <leader>s :source $MYVIMRC<cr>
+nnoremap <leader>r :source $MYVIMRC<cr>
 
 " 安装、更新、删除插件
 nnoremap <leader><leader>i :PluginInstall<cr>
@@ -42,7 +42,6 @@ nnoremap <leader><leader>u :PluginUpdate<cr>
 nnoremap <leader><leader>c :PluginClean<cr>
 nnoremap <leader><leader>l :PluginList<cr>
 
-nmap <leader>wo <C-W>o
 "编辑vim的配置文件
 nmap <leader>fep :e ~/.vim/config/.plug.vim<CR>
 nmap <leader>fec :e ~/.vim/config/.plug.config.vim<CR>
@@ -68,7 +67,6 @@ nnoremap <silent> <Leader>gp :Gpush<CR>
 noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
 noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
 noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
-noremap <leader>rg :<C-U><C-R>=printf("Leaderf rg %s", "")<CR><CR>
 
 "窗口操作
 nnoremap <Leader><TAB> <C-O><CR>
@@ -97,9 +95,8 @@ nmap <leader>va :vertical res+1<CR>
 nmap <leader>vb :vertical res-1<CR>
 nmap <leader>vc <C-W>+<CR>
 nmap <leader>vd <C-W>+<CR>
-
 " jk表示esc
 inoremap jk <esc>
 nnoremap 9 $
 nnoremap 0 ^
-
+noremap  <leader>h :History<CR>

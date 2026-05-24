@@ -1,5 +1,3 @@
-"rainbow 配置
-let g:rainbow_active = 1 " 彩虹括号, 0代表关闭
 
 " tch to last buffer"	 ale-setting {{{ 
 let g:ale_set_highlights = 0 
@@ -137,17 +135,6 @@ let g:airline_powerline_fonts = 1
 
 " 启用
 let g:codeium_enabled = v:true 
-
-" 不要自动映射 Tab（避免和其他补全冲突）
-" let g:codeium_no_map_tab = v:true
-" 1. 禁用 Codeium 自带的快捷键绑定（必须在插件加载之前设置）
-" let g:codeium_disable_bindings = 1
-
-" 2. 手动设置 Tab 键接受补全
-" imap <Tab> <Cmd>call codeium#Accept()<CR>
-
-" 3. （可选）同时设置 Ctrl + ] 作为备用的接受快捷键
-" imap <C-]> <Cmd>call codeium#Accept()<CR>
 " 自定义 Tab 接受
 inoremap <silent><expr> <Tab>
 \ codeium#Accept() ? "\<Tab>" : "\<Tab>"
@@ -164,12 +151,20 @@ inoremap <silent><expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 " 按 Ctrl+Space 手动触发补全
 inoremap <silent> <C-Space> <C-o>:call coc#refresh()<CR>
 
-" 回车不换行，只确认补全（更像 VSCode）
-inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-
+" coc 回车选中补全（标准官方版）
+inoremap <silent><expr> <CR>
+      \ coc#pum#visible() ? coc#pum#confirm()
+      \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " 跳转定义
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 
 " 悬浮提示（看文档）
 nnoremap <silent> K :call CocAction('doHover')<CR>
+
+nmap <leader>s <Plug>(leap-forward)
+nmap <leader>S <Plug>(leap-backward)
+xmap <leader>s <Plug>(leap-forward)
+xmap <leader>S <Plug>(leap-backward)
+omap <leader>s <Plug>(leap-forward)
+omap <leader>S <Plug>(leap-backward)

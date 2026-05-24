@@ -150,3 +150,27 @@ set autowrite
 " 让 Vim 背景透明，继承 Ghostty
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
+
+" fzf.vim 最稳定、不报错的 :Rg 配置（全文搜索）
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --hidden --no-heading --color=never ' . <q-args>,
+  \   1, fzf#vim#with_preview({'down':'40%'}), <bang>0)
+
+" ========== 修复：AutoPairs + UltiSnips + Coc 回车冲突 ==========
+let g:UltiSnipsNoMap = 1
+let g:UltiSnipsExpandTrigger = "<C-l>"
+let g:UltiSnipsJumpForwardTrigger = "<C-l>"
+let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
+
+" 2. 关闭 UltiSnips 对回车的绑定
+let g:UltiSnipsNoMap = 1
+
+" 3. 关闭 auto-pairs 自带回车，避免冲突
+let g:AutoPairsMapCR = 0
+
+" 4. 最终正确回车：Coc补全优先，否则正常换行+括号
+inoremap <silent><expr> <CR>
+      \ coc#pum#visible() ? coc#pum#confirm()
+      \: "\<CR>"
+
