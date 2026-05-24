@@ -173,24 +173,8 @@ let g:AutoPairsMapCR = 0
 inoremap <silent><expr> <CR>
       \ coc#pum#visible() ? coc#pum#confirm()
       \: "\<CR>"
-" 解决 vimagit s/c 冲突：先杀 Easymotion s，再绑 magit
-autocmd FileType magit call s:magit_keys()
-function! s:magit_keys()
-  " 1. 先在 magit 窗口，卸载 Easymotion 的 s
-  silent! nunmap <buffer> s
-  silent! nunmap <buffer> S
-  silent! nunmap <buffer> c
-  silent! nunmap <buffer> C
 
-  " 2. 屏蔽原生 s/c，防止进插入模式
-  nnoremap <buffer> s <Nop>
-  nnoremap <buffer> c <Nop>
 " 用 <Leader>s 代替 S
 let g:magit_stage_file_mapping   = '<Leader>s'
-  " 3. 正确绑定 vimagit（用 nnoremap，避免递归）
-  nnoremap <buffer> s <Plug>(magit-stage)
-  nnoremap <buffer> S <Plug>(magit-unstage)
-  nnoremap <buffer> CC <Plug>(magit-commit)
-  nnoremap <buffer> CA <Plug>(magit-commit-amend)
-  nnoremap <buffer> P <Plug>(magit-push)
-endfunction
+let g:magit_commit_mapping = '<Leader>cc'
+let g:magit_push_mapping = '<Leader>p'
