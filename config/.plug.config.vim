@@ -149,3 +149,4 @@ nnoremap <leader>y :Yazi<CR>
 " 强制 Yazi 退出只关闭自身，保留 Vim
 autocmd FileType yazi nnoremap <buffer> q :close<CR>
 autocmd FileType yazi inoremap <buffer> q <ESC>:close<CR>
+
