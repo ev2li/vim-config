@@ -17,7 +17,7 @@ vmap <leader><leader>j :m'>+<cr>`<my`>mzgv`yo`z
 vmap <leader><leader>k :m'<-2<cr>`>my`<mzgv`yo`z
 
 "编辑文件
-nmap <Leader>fe <Esc>:e 
+nmap <Leader>fe <Esc>:e
 
 "执行vim命令
 nmap xx :
@@ -98,7 +98,7 @@ let g:Lf_CommandMap = {
 \ '<Down>': ['<C-J>']
 \ }
 " leaderF快捷键
-nnoremap <silent> <leader>ff :Leaderf file<CR> 
+nnoremap <silent> <leader>ff :Leaderf file<CR>
 nnoremap <silent> <leader>fb :Leaderf buffer<CR>
 nnoremap <silent> <leader>fm :Leaderf mru<CR>
 nnoremap <silent> <leader>fl :Leaderf line<CR>
