@@ -24,9 +24,10 @@ set nocompatible
 set confirm
 
 " 与windows共享剪贴板
-set clipboard+=unnamed
-
-" 侦测文件类型
+set clipboard+=unnamedplus
+set selection=exclusive 
+set selectmode=mouse,key
+set mousehide
 filetype on
 
 " 载入文件类型插件
@@ -90,7 +91,7 @@ set history=9888
 
 let mapleader=","   "将前缀键定义为逗号
 let mapleader = "\<space>"   "利用转义符“\”将前缀键设置为空格键
-set guifont=Courier\ New:h20
+set guifont=FiraCode\ Nerd\ Font:h20
 
 set nocompatible
 set backspace=2
@@ -153,4 +154,19 @@ nnoremap <silent> <Leader>p :!git push<CR>
 autocmd FileType magit nmap <localleader>sa :<C-u>%S<CR>
 " 关掉 commit 二次确认，写完 message 用 :w 或 ZZ 直接提交
 let g:magit_commit_no_confirm = 1
+
+" 全局开关（默认 1）
+let g:webdevicons_enable = 1
+
+" 常用插件开启/关闭
+let g:webdevicons_enable_nerdtree = 1      " NERDTree 图标
+let g:webdevicons_enable_airline = 1       " airline 状态栏图标
+" NERDTree 美化：隐藏括号
+let g:webdevicons_conceal_nerdtree_brackets = 1
+" NERDTree 默认显示隐藏文件
+let g:NERDTreeShowHidden = 1
+set mouse=a
+
+" 在 .vimrc 中，NERDTree 内按 D 直接删除（跳过菜单）
+autocmd FileType nerdtree nnoremap <buffer> D :call NERDTreeDeleteNode()<CR>
 
