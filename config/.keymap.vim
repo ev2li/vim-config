@@ -52,7 +52,7 @@ nmap <leader>s :FloatermToggle<CR>
 "kill current buffer
 nmap <leader>bd :bunload<CR>
 
-nnoremap <silent> <Leader>g :MagitOnly<CR>
+" nnoremap <silent> <Leader>g :MagitOnly<CR>
 
 "窗口操作
 nnoremap <Leader><TAB> <C-O><CR>
@@ -103,3 +103,18 @@ nnoremap <silent> <leader>fl :Leaderf line<CR>
 nnoremap <silent> <leader>fa :Leaderf rg -i<CR>
 nnoremap <silent><leader>z :MaximizerToggle<CR>
 snoremap yy <C-c>yy
+
+" 快速打开状态窗口
+nnoremap <Leader>gs :Gina status<CR>
+" 快速提交
+nnoremap <Leader>gc :Gina commit<CR>
+" 查看当前文件历史
+nnoremap <Leader>gl :Gina log %<CR>
+" 查看当前文件差异
+nnoremap <Leader>gd :Gina diff<CR>
+" 快速推送
+nnoremap <Leader>gp :Gina push<CR>
+" 暂存当前文件
+nnoremap <Leader>ga :Gina add %<CR>
+" 暂存所有文件
+nnoremap <Leader>gaa :Gina add .<CR>
