@@ -97,7 +97,7 @@ set nocompatible
 set backspace=2
 set t_Co=256
 " 配色方案
-" set background=dark         " dark（暗色）/ light（亮色）
+set background=dark         " dark（暗色）/ light（亮色）
 colorscheme gruvbox
 " colorscheme solarized
 " colorscheme molokai
@@ -195,5 +195,22 @@ autocmd BufWritePre *.py,*.js,*.vim,*.go,*.cpp,*.lua :FixWhitespace
 " 让插件在 Markdown 和 txt 文件中不要高亮错误
 let g:extra_whitespace_ignored_filetypes = ['markdown', 'txt','diff','terminal']
 
-let g:sneak#label = 1
-call gina#custom#command#option('diff', '--opener', 'vsplit')
+" 重排 Buffer 编号（连续 1,2,3...）
+function! ReorderBuffers()
+  let buffers = []
+  for buf in getbufinfo({'buflisted': 1})
+    call add(buffers, buf.name)
+  endfor
+
+  exec "bufdo bwipeout"
+  for f in buffers
+    if !empty(f) && filereadable(f)
+      exec "edit " . fnameescape(f)
+    endif
+  endfor
+
+  echo "Buffer 编号已重新排序！"
+endfunction
+
+" 快捷键：\ + br  一键重排
+nnoremap <leader>br :call ReorderBuffers()<CR>
