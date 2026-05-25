@@ -43,6 +43,8 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'ap/vim-buftabline'
 Plugin 'tpope/vim-repeat'
 Plugin 'wellle/targets.vim'
+Plugin 'romainl/vim-cool'
+Plugin 'maxbrunsfeld/vim-yankstack'
 "你的所有插件需要在下面这行之前
 call vundle#end()
 
