@@ -182,6 +182,12 @@ let g:airline#extensions#tabline#show_close_button = 1
 nnoremap <Leader>1 :1b<CR>
 nnoremap <Leader>2 :2b<CR>
 nnoremap <Leader>3 :3b<CR>
+nnoremap <Leader>4 :4b<CR>
+nnoremap <Leader>5 :5b<CR>
+nnoremap <Leader>6 :6b<CR>
+nnoremap <Leader>7 :7b<CR>
+
 " ... 或通用映射
-" nnoremap <Tab> :bnext<CR>
+nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
+
