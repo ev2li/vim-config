@@ -48,9 +48,11 @@ nmap <leader>fed :e ~/.vimrc<CR>
 "whichkey
 nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 "Floaterm
-nmap <leader>s :FloatermToggle<CR>
+nmap <leader>t :FloatermToggle<CR>
 "kill current buffer
-nmap <leader>bd :bunload<CR>
+nmap <leader>bu :bunload<CR>
+nmap <leader>bw :bw<CR>
+nmap <leader>bd :bd<CR>
 
 " nnoremap <silent> <Leader>g :MagitOnly<CR>
 
@@ -119,3 +121,22 @@ nnoremap <Leader>gp :Gina push<CR>
 nnoremap <Leader>ga :Gina add %<CR>
 " 暂存所有文件
 nnoremap <Leader>gaa :Gina add .<CR>
+
+" 将 <Leader>d 映射为关闭文件并保留窗口（最常用）
+nnoremap <Leader>d :BD<CR>
+
+" 将 <Leader>q 映射为强制删除，不用保存（慎用，但很爽）
+nnoremap <Leader>q :BW<CR>
+
+" 将 Ctrl + 方向键 映射为前后切换
+nnoremap <Leader>bj :BB<CR>
+nnoremap <Leader>bk :BF<CR>
+" 禁用默认的快捷键
+let g:windowswap_map_keys = 0
+" 自定义快捷键：标记窗口（例如：\m）
+nnoremap <silent> <leader>m :call WindowSwap#MarkWindowSwap()<CR>
+" 自定义快捷键：执行交换（例如：\s）
+nnoremap <silent> <leader>s :call WindowSwap#DoWindowSwap()<CR>
+
+" 一键清除当前文件的所有行尾空格
+nnoremap <Leader>fw :FixWhitespace<CR>

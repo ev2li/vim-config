@@ -26,7 +26,7 @@ set confirm
 " 与windows共享剪贴板
 set clipboard+=unnamed
 " 剪贴板操作单独映射
-set selection=exclusive 
+set selection=exclusive
 set selectmode=mouse,key
 set mousehide
 filetype on
@@ -190,4 +190,7 @@ nnoremap <Leader>7 :7b<CR>
 " ... 或通用映射
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprev<CR>
-
+" 针对特定文件类型（如 Python、JavaScript）保存时自动清理
+autocmd BufWritePre *.py,*.js,*.vim,*.go,*.cpp,*.lua :FixWhitespace
+" 让插件在 Markdown 和 txt 文件中不要高亮错误
+let g:extra_whitespace_ignored_filetypes = ['markdown', 'txt','diff','terminal']

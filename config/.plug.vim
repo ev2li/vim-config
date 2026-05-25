@@ -26,7 +26,7 @@ Plugin 'ilyachur/cmake4vim'
 Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/a.vim'
 Plugin 'Yggdroot/indentLine'
-Plugin 'tpope/vim-eunuch', {'on': ['Mkdir', 'Rename', 'Unlink', 'Delete', 'Move', 'Chmod', 'Cfind', 'Clocate', 'Lfine', 'Llocate', 'SudoEdit', 'SudoWrite', 'Wall', 'W']}
+" Plugin 'tpope/vim-eunuch', {'on': ['Mkdir', 'Rename', 'Unlink', 'Delete', 'Move', 'Chmod', 'Cfind', 'Clocate', 'Lfine', 'Llocate', 'SudoEdit', 'SudoWrite', 'Wall', 'W']}
 " 状态栏（替代 powerline，零报错）
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -49,6 +49,10 @@ Plugin 'lambdalisue/vim-gina'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
-"你的所有插件需要在下面这行之前
+Plugin 'qpkorr/vim-bufkill'
+Plugin 'wesQ3/vim-windowswap'
+Plugin 'tpope/vim-eunuch'
+Plugin 'bronson/vim-trailing-whitespace'
+" 你的所有插件需要在下面这行之前
 call vundle#end()
 

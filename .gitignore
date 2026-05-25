@@ -1,4 +1,5 @@
 bundle/
+sessions/
 pack/
 .DS_Store
 *.swp
