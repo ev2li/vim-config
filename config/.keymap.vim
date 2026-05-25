@@ -114,6 +114,7 @@ nnoremap <Leader>gl :Gina log %<CR>
 nnoremap <Leader>gd :Gina diff<CR>
 " 快速推送
 nnoremap <Leader>gp :Gina push<CR>
+
 " 暂存当前文件
 nnoremap <Leader>ga :Gina add %<CR>
 " 暂存所有文件

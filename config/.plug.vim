@@ -46,6 +46,9 @@ Plugin 'wellle/targets.vim'
 Plugin 'romainl/vim-cool'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'lambdalisue/vim-gina'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
 "你的所有插件需要在下面这行之前
 call vundle#end()
 
