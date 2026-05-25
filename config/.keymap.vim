@@ -32,7 +32,7 @@ nmap <leader>wo <C-W>o
 "nnoremap <leader>jo <C-O>
 " 重新加载vimrc文件
 nnoremap <leader>r :source $MYVIMRC<cr>
-
+nnoremap <leader>a :AirlineRefresh<cr>
 " 安装、更新、删除插件
 nnoremap <leader><leader>i :PluginInstall<cr>
 nnoremap <leader><leader>u :PluginUpdate<cr>
@@ -100,4 +100,6 @@ nnoremap <silent> <leader>ff :Leaderf file<CR>
 nnoremap <silent> <leader>fb :Leaderf buffer<CR>
 nnoremap <silent> <leader>fm :Leaderf mru<CR>
 nnoremap <silent> <leader>fl :Leaderf line<CR>
+nnoremap <silent> <leader>fa :Leaderf rg -i<CR>
 nnoremap <silent><leader>z :MaximizerToggle<CR>
+snoremap yy <C-c>yy

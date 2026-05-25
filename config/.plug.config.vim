@@ -113,9 +113,12 @@ let g:airline_powerline_fonts = 1
 " 启用
 let g:codeium_enabled = v:true 
 " 自定义 Tab 接受
+" inoremap <silent><expr> <Tab>
+" \ codeium#Accept() ? "\<Tab>" : "\<Tab>"
+" inoremap <silent><expr> <Tab>
+\ codeium#Accept() ? codeium#Accept() : "\<Tab>"
 inoremap <silent><expr> <Tab>
-\ codeium#Accept() ? "\<Tab>" : "\<Tab>"
-
+\ codeium#Accept() == "" ? "\<Tab>" : codeium#Accept()
 " 状态栏显示状态（可选）
 set statusline+=%{codeium#GetStatusString()}
 

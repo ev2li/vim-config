@@ -24,7 +24,8 @@ set nocompatible
 set confirm
 
 " 与windows共享剪贴板
-set clipboard+=unnamedplus
+set clipboard+=unnamed
+" 剪贴板操作单独映射
 set selection=exclusive 
 set selectmode=mouse,key
 set mousehide
@@ -170,3 +171,17 @@ set mouse=a
 " 在 .vimrc 中，NERDTree 内按 D 直接删除（跳过菜单）
 autocmd FileType nerdtree nnoremap <buffer> D :call NERDTreeDeleteNode()<CR>
 
+" 显示编号，方便切换
+let g:buftabline_numbers = 2    " 2 = 显示 buffer 序号
+let g:buftabline_indicators = 1 " 显示修改标记 (+)
+" 启用 buffer 标签栏
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#show_close_button = 1
+" 切换 buffer
+nnoremap <Leader>1 :1b<CR>
+nnoremap <Leader>2 :2b<CR>
+nnoremap <Leader>3 :3b<CR>
+" ... 或通用映射
+" nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprev<CR>

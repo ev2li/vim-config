@@ -40,6 +40,9 @@ Plugin 'jreybert/vimagit'
 Plugin 'yukimura1227/vim-yazi'
 Plugin 'szw/vim-maximizer'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'ap/vim-buftabline'
+Plugin 'tpope/vim-repeat'
+Plugin 'wellle/targets.vim'
 "你的所有插件需要在下面这行之前
 call vundle#end()
 
