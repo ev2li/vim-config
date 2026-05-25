@@ -225,4 +225,5 @@ nnoremap <silent> <leader>s :call WindowSwap#DoWindowSwap()<CR>
 nnoremap <Leader>fw :FixWhitespace<CR>
 nnoremap <Leader>tv :vert term<CR>
 nnoremap <Leader>th :term<CR>
+nnoremap <Leader>bm :messages<CR>
 

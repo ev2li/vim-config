@@ -194,23 +194,3 @@ nnoremap <S-Tab> :bprev<CR>
 autocmd BufWritePre *.py,*.js,*.vim,*.go,*.cpp,*.lua :FixWhitespace
 " 让插件在 Markdown 和 txt 文件中不要高亮错误
 let g:extra_whitespace_ignored_filetypes = ['markdown', 'txt','diff','terminal']
-
-" 重排 Buffer 编号（连续 1,2,3...）
-function! ReorderBuffers()
-  let buffers = []
-  for buf in getbufinfo({'buflisted': 1})
-    call add(buffers, buf.name)
-  endfor
-
-  exec "bufdo bwipeout"
-  for f in buffers
-    if !empty(f) && filereadable(f)
-      exec "edit " . fnameescape(f)
-    endif
-  endfor
-
-  echo "Buffer 编号已重新排序！"
-endfunction
-
-" 快捷键：\ + br  一键重排
-nnoremap <leader>br :call ReorderBuffers()<CR>
