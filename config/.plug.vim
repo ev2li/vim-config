@@ -53,6 +53,7 @@ Plugin 'qpkorr/vim-bufkill'
 Plugin 'wesQ3/vim-windowswap'
 Plugin 'tpope/vim-eunuch'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'morhetz/gruvbox'
 " 你的所有插件需要在下面这行之前
 call vundle#end()
 

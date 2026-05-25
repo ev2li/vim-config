@@ -90,7 +90,6 @@ set whichwrap+=<,>,h,l
 " History
 set history=9888
 
-let mapleader=","   "将前缀键定义为逗号
 let mapleader = "\<space>"   "利用转义符“\”将前缀键设置为空格键
 set guifont=FiraCode\ Nerd\ Font:h20
 
@@ -98,11 +97,12 @@ set nocompatible
 set backspace=2
 set t_Co=256
 " 配色方案
-"set background=dark
-"colorscheme solarized
+" set background=dark         " dark（暗色）/ light（亮色）
+colorscheme gruvbox
+" colorscheme solarized
 " colorscheme molokai
 " colorscheme inkpot
-colorscheme dark_plus
+" colorscheme dark_plus
 "高亮当前行
 set cursorline
 " hi CursorLine   cterm=NONE ctermbg=black ctermfg=red guibg=NONE guifg=NONE
@@ -194,3 +194,6 @@ nnoremap <S-Tab> :bprev<CR>
 autocmd BufWritePre *.py,*.js,*.vim,*.go,*.cpp,*.lua :FixWhitespace
 " 让插件在 Markdown 和 txt 文件中不要高亮错误
 let g:extra_whitespace_ignored_filetypes = ['markdown', 'txt','diff','terminal']
+
+let g:sneak#label = 1
+call gina#custom#command#option('diff', '--opener', 'vsplit')

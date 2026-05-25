@@ -1,17 +1,17 @@
 
-" tch to last buffer"	 ale-setting {{{ 
-let g:ale_set_highlights = 0 
+" tch to last buffer"	 ale-setting {{{
+let g:ale_set_highlights = 0
 "自定义error和warning图标
-let g:ale_sign_error = '✗' 
+let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
-"在vim自带的状态栏中整合ale 
+"在vim自带的状态栏中整合ale
 let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
 "显示Linter名称,出错或警告等相关信息
-let g:ale_echo_msg_error_str = 'E' 
-let g:ale_echo_msg_warning_str = 'W' 
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 "打开文件时不进行检查
-let g:ale_lint_on_enter = 0 
+let g:ale_lint_on_enter = 0
 
 "普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
 nmap sp <Plug>(ale_previous_wrap)
@@ -44,7 +44,7 @@ let g:NERDTreeHidden=0
 ""------------------------------------------------nerdtree插件配置结束---------------------------------------------------------
 
 set laststatus=2
-"let g:lightline = { 
+"let g:lightline = {
 "      \ 'colorscheme': 'one',
 "      \ }
 """"""""""""""""""""""""""""""
@@ -111,7 +111,7 @@ set encoding=utf-8
 let g:airline_powerline_fonts = 1
 
 " 启用
-let g:codeium_enabled = v:true 
+let g:codeium_enabled = v:true
 " 自定义 Tab 接受
 " inoremap <silent><expr> <Tab>
 " \ codeium#Accept() ? "\<Tab>" : "\<Tab>"
