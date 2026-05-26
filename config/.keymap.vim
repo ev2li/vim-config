@@ -223,7 +223,11 @@ nnoremap <silent> <leader>m :call WindowSwap#MarkWindowSwap()<CR>
 nnoremap <silent> <leader>s :call WindowSwap#DoWindowSwap()<CR>
 " 一键清除当前文件的所有行尾空格
 nnoremap <Leader>fw :FixWhitespace<CR>
+" 一键打开终端
 nnoremap <Leader>tv :vert term<CR>
 nnoremap <Leader>th :term<CR>
+" 查看messages
 nnoremap <Leader>bm :messages<CR>
+" 一键保存
+nnoremap <Leader>fs :w<CR>
 

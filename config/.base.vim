@@ -206,3 +206,8 @@ let g:auto_save = 1
 " 默认是：离开插入模式时 (InsertLeave) 和文本被修改时 (TextChanged)
 " 这里设置为当 Vim 窗口失去焦点时保存，类似于 VS Code 的 onFocusChange
 let g:auto_save_events = ["FocusLost"]
+
+" 解决whichkey卡顿问题
+set timeout timeoutlen=250 ttimeoutlen=10
+let g:which_key_modes=['n']
+let g:which_key_disable_default_group=1
