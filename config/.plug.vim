@@ -37,8 +37,8 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'yukimura1227/vim-yazi'
 Plugin 'szw/vim-maximizer'
-Plugin 'ryanoasis/vim-devicons'
 Plugin 'ap/vim-buftabline'
+Plugin 'ryanoasis/vim-devicons'
 Plugin 'tpope/vim-repeat'
 Plugin 'wellle/targets.vim'
 Plugin 'romainl/vim-cool'
@@ -64,6 +64,7 @@ Plugin 'voldikss/vim-translator'
 Plugin 'farmergreg/vim-lastplace'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'MattesGroeger/vim-bookmarks'
+Plugin 'pelodelfuego/vim-swoop'
 
 "所有插件需要在下面这行之前
 call vundle#end()

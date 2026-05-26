@@ -261,3 +261,6 @@ vmap <silent> <Leader>tw <Plug>TranslateWV
 " 用翻译结果替换光标下的词
 nmap <silent> <Leader>tr <Plug>TranslateR
 vmap <silent> <Leader>tr <Plug>TranslateRV
+
+" 将 <Leader>s 映射为在全部缓冲区中搜索
+nnoremap <Leader>sp :Swoop<CR>
