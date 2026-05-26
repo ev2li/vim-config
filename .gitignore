@@ -3,3 +3,4 @@ sessions/
 pack/
 .DS_Store
 *.swp
+.vim-bookmarks

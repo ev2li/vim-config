@@ -220,3 +220,16 @@ let g:quickrun_config = {
 \   "python" : {"command" : "python3"},
 \   "javascript" : {"command" : "node"},
 \}
+
+" 默认已忽略 gitcommit,gitrebase,svn,hgcommit
+" 可以添加更多，比如忽略 markdown 文件
+let g:lastplace_ignore = "gitcommit,gitrebase,svn,hgcommit,markdown"
+" 默认忽略 quickfix（快速修复窗口）、nofile（临时文件）、help（帮助文档）
+let g:lastplace_ignore_buftype = "quickfix,nofile,help"
+let g:system_copy_silent = 1
+
+let g:bookmark_highlight_lines = 1
+" 修改书签符号为心形
+let g:bookmark_sign = '♥'
+let g:bookmark_save_per_working_dir = 1
+let g:bookmark_auto_save = 1

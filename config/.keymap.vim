@@ -21,6 +21,7 @@ nmap <Leader>fe <Esc>:e
 
 "执行vim命令
 nmap xx :
+nmap <leader>x :
 
 "前后buffer
 map <leader>bn :bnext<cr>
