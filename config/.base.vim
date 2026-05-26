@@ -15,14 +15,10 @@ set lcs=tab:\|\ ,nbsp:%,trail:.
 highlight LeaderTab guifg=#666666
 " " 匹配行首tab
 match LeaderTab /^\t/
-
 " 不要使用vi的键盘模式，而是vim自己的
 set nocompatible
-
 " 在处理未保存或只读文件的时候，弹出确认
-
 set confirm
-
 " 与windows共享剪贴板
 set clipboard+=unnamed
 " 剪贴板操作单独映射
@@ -30,50 +26,36 @@ set selection=exclusive
 set selectmode=mouse,key
 set mousehide
 filetype on
-
 " 载入文件类型插件
 filetype plugin on
-
 " 为特定文件类型载入相关缩进文件
 filetype indent on
-
 " 保存全局变量
 set viminfo+=!
-
 " 带有如下符号的单词不要被换行分割
 set iskeyword+=_,$,@,%,#,-
-
 " 语法高亮
 syntax on
-
 " 高亮字符，让其不受100列限制
 :highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
 :match OverLength '1v.*'
-
 " 不要备份文件（根据自己需要取舍）
 set nobackup
-
 " 不要生成swap文件，当buffer被丢弃的时候隐藏它
 setlocal noswapfile
 set bufhidden=hide
-
 " 字符间插入的像素行数目
 set linespace=0
-
 " 增强模式中的命令行自动完成操作
 set wildmenu
-
 " 在状态行上显示光标所在位置的行号和列号
 set ruler
-
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-
 " Setting Spell Checker
 set spelllang=en_us                      " spelling options
 set dictionary+=/usr/share/dict/words
-
 " Set Spliter
 set splitright
 set splitbelow
@@ -105,7 +87,7 @@ colorscheme gruvbox
 " colorscheme dark_plus
 "高亮当前行
 set cursorline
-" hi CursorLine   cterm=NONE ctermbg=black ctermfg=red guibg=NONE guifg=NONE
+hi CursorLine   cterm=NONE ctermbg=black ctermfg=red guibg=NONE guifg=NONE
 
 " 以下内容来自韦大的配置
 " 文件搜索和补全时忽略下面的扩展名

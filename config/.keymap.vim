@@ -187,20 +187,20 @@ nnoremap <silent><leader>z :MaximizerToggle<CR>
 snoremap yy <C-c>yy
 
 " 快速打开状态窗口
-nnoremap <Leader>gs :Gina status<CR>
+nnoremap <Leader>gs :Git status<CR>
 " 快速提交
-nnoremap <Leader>gc :Gina commit<CR>
+nnoremap <Leader>gc :Git commit<CR>
 " 查看当前文件历史
-nnoremap <Leader>gl :Gina log %<CR>
+nnoremap <Leader>gl :Git log %<CR>
 " 查看当前文件差异
-nnoremap <Leader>gd :Gina diff<CR>
+nnoremap <Leader>gd :Gvdiffsplit<CR>
 " 快速推送
-nnoremap <Leader>gp :Gina push<CR>
+nnoremap <Leader>gp :Git push<CR>
 
 " 暂存当前文件
-nnoremap <Leader>ga :Gina add %<CR>
+nnoremap <Leader>ga :Git add %<CR>
 " 暂存所有文件
-nnoremap <Leader>gaa :Gina add .<CR>
+nnoremap <Leader>gaa :Git add .<CR>
 
 " 将 <Leader>d 映射为关闭文件并保留窗口（最常用）
 nnoremap <Leader>d :BD<CR>
@@ -263,4 +263,4 @@ nmap <silent> <Leader>tr <Plug>TranslateR
 vmap <silent> <Leader>tr <Plug>TranslateRV
 
 " 将 <Leader>s 映射为在全部缓冲区中搜索
-nnoremap <Leader>sp :Swoop<CR>
+"nnoremap <Leader>sp :Swoop<CR>
