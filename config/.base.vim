@@ -211,3 +211,12 @@ let g:auto_save_events = ["FocusLost"]
 set timeout timeoutlen=250 ttimeoutlen=10
 let g:which_key_modes=['n']
 let g:which_key_disable_default_group=1
+
+let g:quickrun_config = {
+\   "python" : {"command" : "python3"},
+\   "javascript" : {"command" : "node"},
+\}
+let g:quickrun_config = {
+\   "python" : {"command" : "python3"},
+\   "javascript" : {"command" : "node"},
+\}

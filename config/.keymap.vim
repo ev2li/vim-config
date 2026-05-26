@@ -29,15 +29,13 @@ map <leader>bp :bprevious<cr>
 nmap <leader>ls <Esc>:ls<CR>
 "最大化buffer
 nmap <leader>wo <C-W>o
-"nnoremap <leader>jo <C-O>
 " 重新加载vimrc文件
-nnoremap <leader>r :source $MYVIMRC<cr>
-nnoremap <leader>a :AirlineRefresh<cr>
+nnoremap <leader>r :source $MYVIMRC<cr> :AirlineRefresh<cr>
 " 安装、更新、删除插件
-nnoremap <leader><leader>i :PluginInstall<cr>
-nnoremap <leader><leader>u :PluginUpdate<cr>
-nnoremap <leader><leader>c :PluginClean<cr>
-nnoremap <leader><leader>l :PluginList<cr>
+nnoremap <leader>pi :PluginInstall<cr>
+nnoremap <leader>pu :PluginUpdate<cr>
+nnoremap <leader>pc :PluginClean<cr>
+nnoremap <leader>pl :PluginList<cr>
 
 "编辑vim的配置文件
 nmap <leader>fep :e ~/.vim/config/.plug.vim<CR>
@@ -54,8 +52,6 @@ nmap <leader>bu :bunload<CR>
 nmap <leader>bw :bw<CR>
 nmap <leader>bd :bd<CR>
 
-" nnoremap <silent> <Leader>g :MagitOnly<CR>
-
 "窗口操作
 nnoremap <Leader><TAB> <C-O><CR>
 nnoremap <leader>ws :<C-u>sp<CR>
@@ -219,10 +215,10 @@ let g:windowswap_map_keys = 0
 " 自定义快捷键：标记窗口（例如：\m）
 nnoremap <silent> <leader>m :call WindowSwap#MarkWindowSwap()<CR>
 " 自定义快捷键：执行交换（例如：\s）
-
 nnoremap <silent> <leader>s :call WindowSwap#DoWindowSwap()<CR>
 " 一键清除当前文件的所有行尾空格
 nnoremap <Leader>fw :FixWhitespace<CR>
+
 " 一键打开终端
 nnoremap <Leader>tv :vert term<CR>
 nnoremap <Leader>th :term<CR>
@@ -231,3 +227,36 @@ nnoremap <Leader>bm :messages<CR>
 " 一键保存
 nnoremap <Leader>fs :w<CR>
 
+" 用插件的增强版替换默认的 / 和 ? 搜索命令
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+" 这个映射用于搜索时光标不自动跳转，只高亮
+map g/ <Plug>(incsearch-stay)
+
+" 配置：在搜索结束（比如移动光标）后自动取消高亮
+" 这让你可以随时用 n/N 重新高亮下一个匹配项，体验更好
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+
+" 映射快捷键 <Leader>qr 执行当前文件
+nnoremap <Leader>ra :QuickRun<CR>
+" 运行当前文件（输出到独立缓冲区，方便查看）
+nnoremap <Leader>rs :QuickRun -outputter buffer<CR>
+
+" 翻译光标下的词（在命令行显示结果）
+nmap <silent> <Leader>tt <Plug>Translate
+" 翻译选中的词（在命令行显示结果）
+vmap <silent> <Leader>tt <Plug>TranslateV
+
+" 翻译光标下的词（在新窗口显示详情）
+nmap <silent> <Leader>tw <Plug>TranslateW
+vmap <silent> <Leader>tw <Plug>TranslateWV
+
+" 用翻译结果替换光标下的词
+nmap <silent> <Leader>tr <Plug>TranslateR
+vmap <silent> <Leader>tr <Plug>TranslateRV
