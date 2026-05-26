@@ -138,7 +138,6 @@ set autowrite
 " 让 Vim 背景透明，继承 Ghostty
 highlight Normal ctermbg=NONE guibg=NONE
 highlight NonText ctermbg=NONE guibg=NONE
-
 " fzf.vim 最稳定、不报错的 :Rg 配置（全文搜索）
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -194,3 +193,16 @@ nnoremap <S-Tab> :bprev<CR>
 autocmd BufWritePre *.py,*.js,*.vim,*.go,*.cpp,*.lua :FixWhitespace
 " 让插件在 Markdown 和 txt 文件中不要高亮错误
 let g:extra_whitespace_ignored_filetypes = ['markdown', 'txt','diff','terminal']
+
+" 在 ~/.vimrc 中添加：
+
+" 1. 启用自动保存功能 (1 为开启)
+let g:auto_save = 1
+
+" 2. (可选) 设置静默模式，不显示 "Saved" 之类的提示
+" let g:auto_save_silent = 1
+
+" 3. (可选) 设置触发自动保存的事件
+" 默认是：离开插入模式时 (InsertLeave) 和文本被修改时 (TextChanged)
+" 这里设置为当 Vim 窗口失去焦点时保存，类似于 VS Code 的 onFocusChange
+let g:auto_save_events = ["FocusLost"]
