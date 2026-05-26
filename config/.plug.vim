@@ -65,7 +65,7 @@ Plugin 'farmergreg/vim-lastplace'
 Plugin 'christoomey/vim-system-copy'
 Plugin 'MattesGroeger/vim-bookmarks'
 Plugin 'pelodelfuego/vim-swoop'
-
+Plugin 'Konfekt/vim-alias'
 "所有插件需要在下面这行之前
 call vundle#end()
 

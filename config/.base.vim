@@ -234,3 +234,7 @@ let g:bookmark_sign = '♥'
 let g:bookmark_save_per_working_dir = 1
 let g:bookmark_auto_save = 1
 
+set wildmenu
+set wildmode=longest:full,full
+set cmdheight=2
+set wildignore+=*.o,*.bak,.git,node_modules
