@@ -150,3 +150,16 @@ nnoremap <leader>y :Yazi<CR>
 autocmd FileType yazi nnoremap <buffer> q :close<CR>
 autocmd FileType yazi inoremap <buffer> q <ESC>:close<CR>
 let g:session_autoload = 'prompt'  " 启动时询问加载
+
+" -------- ranger.vim 配置 --------
+" 禁用默认映射，自己设
+let g:ranger_map_keys = 0
+
+" 打开当前目录 ranger
+nnoremap <leader>fr :Ranger<CR>
+" 在新标签打开 ranger
+nnoremap <leader>ft :RangerNewTab<CR>
+
+" 可选：替换默认 netrw
+let g:ranger_replace_netrw = 1
+let g:ranger_quit_after_open = 1
