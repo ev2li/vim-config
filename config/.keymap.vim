@@ -198,9 +198,9 @@ nnoremap <Leader>gd :Gvdiffsplit<CR>
 nnoremap <Leader>gp :Git push<CR>
 
 " 暂存当前文件
-nnoremap <Leader>ga :Git add %<CR>
+nnoremap <Leader>gaa :Git add %<CR>
 " 暂存所有文件
-nnoremap <Leader>gaa :Git add .<CR>
+nnoremap <Leader>ga :Git add .<CR>
 
 " 将 <Leader>d 映射为关闭文件并保留窗口（最常用）
 nnoremap <Leader>d :BD<CR>
